@@ -1,0 +1,6 @@
+{
+  "type" : "record",
+  "name" : "country",
+  "namespace" : "REF.ZPD",
+  "fields" : []
+}

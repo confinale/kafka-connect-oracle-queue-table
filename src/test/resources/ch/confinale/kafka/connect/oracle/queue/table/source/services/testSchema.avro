@@ -1,0 +1,21 @@
+{
+  "type" : "record",
+  "name" : "country",
+  "namespace" : "REF.ZPD",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "long"
+  }, {
+    "name" : "active",
+    "type" : "boolean"
+  }, {
+    "name" : "textEnglish",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "lastModifiedAt",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  } ]
+}
