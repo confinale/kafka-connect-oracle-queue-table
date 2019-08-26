@@ -1,5 +1,6 @@
-Kafka Connect Oracle Queue Table
+Kafka Connect Oracle Queue Table 
 ================================
+[![CircleCI](https://circleci.com/gh/confinale/kafka-connect-oracle-queue-table.svg?style=svg)](https://circleci.com/gh/confinale/kafka-connect-oracle-queue-table)
 
 This source connector was developed as alternative to JMS connector using Advanced Queuing of Oracle Database. It uses features of Oracle Database on which Advanced Queuing is built on but simplifies things by only requiring standard database table which is representing queue. Rows are polled from the queue table using Oracle specific query _SELECT ... FOR UPDATE SKIP LOCKED_. This locks the rows for parallel reading until _COMMIT_ is performed and allows reading of distinct row in parallel by several connections. Because the rows are deleted (using _ROWID_) as soon as the data are successfully written to Kafka topic, the feature prevents processing same rows twice. 
 
